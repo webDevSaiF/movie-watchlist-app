@@ -1,32 +1,69 @@
-# React + TypeScript + Vite
+# 🎬 Movie Watchlist App
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+A movie watchlist app built with **React** and **TypeScript**. Filter movies, mark them as watched, like your favorites, and track your progress.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- 📋 Movie list loaded from a JSON file
+- ✅ Mark movies as watched or not watched
+- ❤️ Like counter for each movie
+- 🔍 Filter by All, Watched, or Not Watched
+- 📊 Live stats: total, watched, and remaining
+- ⭐ "Top Rated" badge for movies rated 8.5 or higher
+- ⏳ Loading state with Suspense
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
 
-## Expanding the Oxlint configuration
+## Getting Started
 
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
+```bash
+# Clone the repo
+git clone https://github.com/your-username/movie-watchlist-app.git
 
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+# Go into the folder
+cd movie-watchlist-app
+
+# Install dependencies
+npm install
+
+# Start the dev server
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+Then open `http://localhost:5173` in your browser.
+
+## Project Structure
+
+```
+public/
+└── data.json
+src/
+├── components/
+│   ├── Header/
+│   ├── Footer/
+│   ├── Stats/
+│   ├── FilterButtons/
+│   ├── MovieApp/
+│   └── MovieList/
+│   └── Movies/
+├── types/
+│   └── type.ts
+└── App.tsx
+```
+
+## Concepts Practiced
+
+- Components and importing/exporting
+- JSX and JavaScript in curly braces
+- Props with TypeScript interfaces
+- Conditional rendering
+- Rendering lists with `.map()` and keys
+- Pure components and immutable state updates
+- `useState` and lifting state up
+- `use()` with `Suspense` for loading data
+- Union types, `Record`, and typed function props
